@@ -1,0 +1,13 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0;
+
+  &--fullscreen {
+    position: fixed;
+    inset: 0;
+    background-color: var(--mat-sys-surface);
+    z-index: 10;
+  }
+}

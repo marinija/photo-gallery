@@ -1,0 +1,17 @@
+@if (favoritePhotos().length) {
+  <grid-layout>
+    @for (photo of favoritePhotos(); track photo.id) {
+      <photo-card [photo]="photo" />
+    }
+  </grid-layout>
+} @else {
+  <div class="favorites__empty">
+    <div class="favorites__empty-icon">
+      <mat-icon>favorite_border</mat-icon>
+    </div>
+    <h2>No favorites yet</h2>
+    <p>Browse the photostream and click any photo to save it here.</p>
+    <a mat-stroked-button [routerLink]="['/']">Browse photos</a>
+  </div>
+}
+

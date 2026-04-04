@@ -1,0 +1,19 @@
+<mat-toolbar class="header">
+  <nav class="header__nav">
+    <a
+      mat-stroked-button
+      routerLink="/"
+      routerLinkActive="header__nav-btn--active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="header__nav-btn">
+      Photos
+    </a>
+    <a
+      mat-stroked-button
+      routerLink="/favorites"
+      routerLinkActive="header__nav-btn--active"
+      class="header__nav-btn">
+      Favorites
+    </a>
+  </nav>
+</mat-toolbar>

@@ -1,0 +1,20 @@
+.footer {
+  background-color: var(--mat-sys-tertiary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  border-top: 1px solid var(--mat-sys-outline-variant);
+  margin-top: auto;
+
+  &__text {
+    font-size: 13px;
+    color: #FFF;
+    margin: 0;
+  }
+
+  &__author {
+    text-decoration: underline;
+  }
+}

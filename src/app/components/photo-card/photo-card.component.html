@@ -1,0 +1,21 @@
+@if (photo(); as photo) {
+  <a [routerLink]="['/', 'photos', photo.id]">
+    <mat-card class="photo-card">
+      <img
+        mat-card-image
+        [ngSrc]="photo.thumbnailUrl"
+        [width]="300"
+        [height]="400"
+        [alt]="photo.author"
+        class="photo-card__image"
+        loading="lazy"
+      />
+
+      <div class="photo-card__overlay">
+        <mat-icon class="photo-card__icon" (click)="onClick($event)">
+          {{ isFavorite() ? 'favorite' : 'favorite_border' }}
+        </mat-icon>
+      </div>
+    </mat-card>
+  </a>
+}

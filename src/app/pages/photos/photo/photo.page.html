@@ -1,0 +1,20 @@
+@if (photo) {
+  <div class="photo-page">
+    <img
+      class="photo-page__image"
+      [ngSrc]="photo.fullUrl"
+      [width]="1200"
+      [height]="900"
+      [alt]="photo.author"
+      priority
+    />
+
+    <div class="photo-page__actions">
+      <button mat-stroked-button (click)="removeFromFavorites()">
+        Remove from favorites
+      </button>
+    </div>
+  </div>
+} @else {
+  <loading [fullScreen]="true" />
+}
