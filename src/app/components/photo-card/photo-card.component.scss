@@ -39,5 +39,9 @@
     font-size: 48px;
     width: 48px;
     height: 48px;
+
+    &.active {
+      color: var(--mat-sys-primary);
+    }
   }
 }

@@ -11,8 +11,6 @@ export class PhotosService {
   private readonly BASE_URL = 'https://picsum.photos';
   private http = inject(HttpClient);
 
-  constructor() {}
-
   getPhotos(page = 1, limit = 12): Observable<Photo[]> {
     return this.http.get<Photo[]>(`${this.BASE_URL}/v2/list?page=${page}&limit=${limit}`).pipe(
       map((photos) =>

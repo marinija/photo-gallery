@@ -12,7 +12,7 @@
       />
 
       <div class="photo-card__overlay">
-        <mat-icon class="photo-card__icon" (click)="onClick($event)">
+        <mat-icon class="photo-card__icon" [class.active]="isFavorite()" (click)="onClick($event)">
           {{ isFavorite() ? 'favorite' : 'favorite_border' }}
         </mat-icon>
       </div>
